@@ -42,6 +42,39 @@
     font-weight: 900;
  }
 
+
+.additional-options {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.forgot-password {
+    display: block;
+    color: #0066ff;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.back-btn{
+    background-color: var(--background-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.back-btn .icon {
+width:22px;
+}
+
+
  @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     .auth-left{
