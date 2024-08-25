@@ -18,23 +18,20 @@ const AuthForm: FC = () => {
 
   return (
     <>
-      <Stepper
-        steps={authFormSteps}
-        currentStep={step}
-        onNext={handleNext}
-        onBack={handleBack}
-      />
-
-      {/* <Input label="Email" type="text" />
-      <Input label="Password" type="text" />
-      <Button
-        title={
-          authStore.selectedAuthMethod == "register"
-            ? "Regjistrohu"
-            : "Identifikohu"
-        }
-      />
-      <AdditionalOptions /> */}
+      {authStore.selectedAuthMethod == "register" ? (
+        <Stepper
+          steps={authFormSteps}
+          currentStep={step}
+          onNext={handleNext}
+          onBack={handleBack}
+        />
+      ) : (
+        <>
+          <Input label="Email" type="text" />
+          <Input label="Password" type="text" />
+          <Button title={"Identifikohu"} />
+        </>
+      )}
     </>
   );
 };
