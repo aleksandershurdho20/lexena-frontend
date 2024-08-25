@@ -1,4 +1,4 @@
- button {
+ .main-btn{
     width: 100%;
     padding: 10px;
     background-color: var(--main-color);
@@ -9,6 +9,6 @@
     cursor: pointer;
 }
 
- button:hover {
+ .main-btn:hover {
     background-color: #0056e0;
 }

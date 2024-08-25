@@ -71,7 +71,26 @@
 }
 
 .back-btn .icon {
-width:22px;
+    width:22px;
+}
+
+.personal-information-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.personal-information-row {
+    display: flex;
+    gap: 20px;
+}
+
+.personal-information-row > div {
+    flex: 1;
+}
+
+.personal-information-inputs {
+    flex: 50%;
 }
 
 

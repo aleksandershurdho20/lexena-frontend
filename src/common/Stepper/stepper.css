@@ -1,0 +1,34 @@
+.stepper-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.step {
+    padding: 12px 20px;
+    flex-grow: 1;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.step.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.step:hover:not(.active) {
+    background-color: #e9ecef;
+}
+
+.stepper-content {
+    margin-bottom: 24px;
+}
+
+.stepper-footer {
+    display: flex;
+    justify-content: space-between;
+}

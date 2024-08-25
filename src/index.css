@@ -4,10 +4,35 @@
   --background-color: #F9FAFC;
   --input-color: #E6E6E8;
   --text-color-light: #9DA1A4;
+  --btn-bg-light:hsl(0 0% 100%)
 }
 
 body {
   font-family: 'Noto Sans', sans-serif;
 
+}
+.btn {
+
+  padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    cursor: pointer;
+
+}
+.btn-light {
+  background: var(--btn-bg-light);
+  border: 1px solid hsl(0deg 0% 84.25%);
+}
+
+.btn-blue-bordered{
+  background: var(--btn-bg-light);
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
+}
+
+.text-sn {
+  font-size: .875rem;
+  line-height: 1.25rem;
 }
 

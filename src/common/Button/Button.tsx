@@ -7,7 +7,7 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 
 const Button: FC<ButtonProps> = ({ title, type = "button", ...props }) => {
   return (
-    <button type={type} {...props}>
+    <button type={type} {...props} className="main-btn">
       {title}
     </button>
   );
