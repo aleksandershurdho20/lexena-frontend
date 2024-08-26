@@ -8,6 +8,8 @@ interface SelectProps {
   placeholder?: string;
   label?: string;
   required?: boolean;
+  errorMessage?: string;
+  onBlur?: () => void;
 }
 
 const Select: React.FC<SelectProps> = ({
@@ -17,6 +19,8 @@ const Select: React.FC<SelectProps> = ({
   placeholder = "Select an option",
   label,
   required,
+  errorMessage,
+  onBlur,
 }) => {
   return (
     <div className="select-container">
@@ -31,6 +35,7 @@ const Select: React.FC<SelectProps> = ({
           value={value}
           onChange={(e) => onChange(e.target.value)}
           className="select-box"
+          onBlur={onBlur}
         >
           <option value="" disabled>
             {placeholder}
@@ -41,6 +46,7 @@ const Select: React.FC<SelectProps> = ({
             </option>
           ))}
         </select>
+        <p className="error-message">{errorMessage}</p>
       </div>
     </div>
   );

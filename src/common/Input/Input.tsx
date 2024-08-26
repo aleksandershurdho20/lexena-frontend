@@ -5,9 +5,10 @@ import "./input.css";
 type InputProps = React.InputHTMLAttributes<HTMLInputElement> & {
   label?: string;
   required?: boolean;
+  errorMessage?: any;
 };
 
-const Input: FC<InputProps> = ({ label, required, ...props }) => {
+const Input: FC<InputProps> = ({ label, required, errorMessage, ...props }) => {
   return (
     <div className="input-group">
       {label && (
@@ -18,6 +19,7 @@ const Input: FC<InputProps> = ({ label, required, ...props }) => {
       )}
 
       <input {...props} />
+      <p className="error-message">{errorMessage}</p>
     </div>
   );
 };

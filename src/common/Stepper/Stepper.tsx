@@ -10,6 +10,7 @@ interface StepperProps {
   currentStep: number;
   onNext: () => void;
   onBack: () => void;
+  disableBtn?: boolean;
 }
 
 const Stepper: React.FC<StepperProps> = ({
@@ -17,6 +18,7 @@ const Stepper: React.FC<StepperProps> = ({
   currentStep,
   onNext,
   onBack,
+  disableBtn,
 }) => {
   return (
     <div>
@@ -41,7 +43,7 @@ const Stepper: React.FC<StepperProps> = ({
         </button>
         <button
           onClick={onNext}
-          disabled={currentStep === steps.length - 1}
+          disabled={disableBtn ? disableBtn : currentStep === steps.length - 1}
           className=" btn btn-blue-bordered"
         >
           <span className="text-sm">Hapi para</span>

@@ -4,7 +4,8 @@
   --background-color: #F9FAFC;
   --input-color: #E6E6E8;
   --text-color-light: #9DA1A4;
-  --btn-bg-light:hsl(0 0% 100%)
+  --btn-bg-light:hsl(0 0% 100%);
+  --color-red:red;
 }
 
 body {
@@ -46,7 +47,7 @@ body {
 }
 
 .required {
-  color: red;
+  color: var(--color-red);
 }
 
 .select-wrapper {
@@ -89,5 +90,10 @@ body {
   padding: 8px;
   background-color: #fff;
   color: #333;
+}
+.error-message {
+  color: var(--color-red);
+  margin:0;
+  padding:0;
 }
 

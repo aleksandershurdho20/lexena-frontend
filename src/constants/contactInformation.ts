@@ -59,3 +59,10 @@ export const regions : contactInformationDropdown[] = [
     { value: "divjake", label: "Divjakë" },
     { value: "kamze", label: "Kamzë" },
   ]
+
+  export const gender : contactInformationDropdown [] = [
+    {value: "male", label: "Mashkull" },
+
+    {value: "female", label: "Femër" }
+
+  ]
