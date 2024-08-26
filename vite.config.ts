@@ -8,4 +8,6 @@ export default defineConfig({
       src: "/src",
     },
   },
+  assetsInclude: ['**/*.png'], // Add this line to include PNG files as assets
+
 });

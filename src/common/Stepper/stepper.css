@@ -16,7 +16,8 @@
 }
 
 .step.active {
-    background-color: #007bff;
+    /* background-color: #007bff; */
+    background-color: var(--main-color);
     color: #fff;
 }
 

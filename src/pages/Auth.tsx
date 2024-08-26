@@ -5,12 +5,26 @@ import "src/assets/styles/auth.css";
 import { Cards } from "src/components/Auth";
 import AuthForm from "src/components/Auth/AuthForm";
 import authStore from "src/stores/auth";
+import logo from "src/assets/logo.png";
+import { MailIcon } from "lucide-react";
+
 const Auth: FC = () => {
   return (
     <div className="auth-wrapper">
       <div className="auth-left">
         <div className="logo">
-          <h4>Logo here</h4>
+          <img src={logo} alt="logo" />
+        </div>
+        <h4 className="auth-title">Numri 1 ne bote!</h4>
+
+        <div className="auth-footer">
+          <div>
+            <span className="text-sm">© Lexena 2024</span>
+          </div>
+          <div className="support-wrapper">
+            <MailIcon />
+            <span className="text-sm">support@gmail.com</span>
+          </div>
         </div>
       </div>
       <div className="auth-right">

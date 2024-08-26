@@ -12,6 +12,10 @@
 .logo{
     margin-top:40px;
 }
+.logo img {
+    width: 39%;
+    height: 100%;
+}
 
 .auth-right {
     flex:60%;
@@ -93,7 +97,23 @@
     flex: 50%;
 }
 
+.auth-title{
+    font-size: 60px;
+    color: var(--main-color);
+}
+.support-wrapper{
+    display: flex;
+    gap:10px;
+    align-items: center;
+}
 
+.auth-footer {
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    gap:40px;
+    color: #393E46;
+}
  @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     .auth-left{
