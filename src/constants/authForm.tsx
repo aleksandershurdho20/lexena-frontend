@@ -11,11 +11,6 @@ type Step = {
   component: React.ReactNode;
 };
 
-type Nationalities = {
-  label: string;
-  value: string;
-};
-
 export const authFormSteps: Step[] = [
   { label: "Informacioni Personal", component: <PersonalInformation /> },
   { label: "Informacioni i vendbanimit", component: <ContactInformation /> },

@@ -6,11 +6,13 @@ import Button from "src/common/Button/Button";
 const Confirm: FC = () => {
   return (
     <>
-      <input type="checkbox" />
-      <span>
-        Konfirmoj <a>Deklaraten</a>
-      </span>
-      <Button title="regjistrohu" />
+      <div>
+        <input type="checkbox" />
+        <span>
+          Konfirmoj <a>Deklaraten</a>
+        </span>
+      </div>
+      <Button title="Regjistrohu" />
     </>
   );
 };

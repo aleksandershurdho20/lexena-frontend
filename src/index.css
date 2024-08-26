@@ -11,6 +11,8 @@ body {
   font-family: 'Noto Sans', sans-serif;
 
 }
+
+
 .btn {
 
   padding-top: .5rem;
@@ -18,6 +20,7 @@ body {
     padding-left: 1rem;
     padding-right: 1rem;
     cursor: pointer;
+    border-radius: 6px;
 
 }
 .btn-light {
@@ -34,5 +37,57 @@ body {
 .text-sn {
   font-size: .875rem;
   line-height: 1.25rem;
+}
+
+.select-container {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+}
+
+.required {
+  color: red;
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+.select-box {
+  appearance: none;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.select-box:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+  outline: none;
+}
+
+.select-box::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+  pointer-events: none;
+}
+
+.select-box option {
+  padding: 8px;
+  background-color: #fff;
+  color: #333;
 }
 

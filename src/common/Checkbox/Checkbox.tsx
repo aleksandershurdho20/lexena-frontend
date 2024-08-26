@@ -7,19 +7,20 @@ type InputProps = React.InputHTMLAttributes<HTMLInputElement> & {
   required?: boolean;
 };
 
-const Input: FC<InputProps> = ({ label, required, ...props }) => {
+const CheckBox: FC<InputProps> = ({ label, required, ...props }) => {
   return (
-    <div className="input-group">
+    <div className="custom-checkbox">
       {label && (
         <label>
           {label}
           {required && <span className="required">*</span>}
         </label>
       )}
+      <span className="checkmark"></span>
 
-      <input {...props} />
+      <input type="checkbox" {...props} />
     </div>
   );
 };
 
-export default observer(Input);
+export default observer(CheckBox);

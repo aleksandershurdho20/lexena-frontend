@@ -7,6 +7,7 @@ interface SelectProps {
   onChange: (value: string) => void;
   placeholder?: string;
   label?: string;
+  required?: boolean;
 }
 
 const Select: React.FC<SelectProps> = ({
@@ -15,24 +16,32 @@ const Select: React.FC<SelectProps> = ({
   onChange,
   placeholder = "Select an option",
   label,
+  required,
 }) => {
   return (
     <div className="select-container">
-      {label && <label className="select-label">{label}</label>}
-      <select
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        className="select-box"
-      >
-        <option value="" disabled>
-          {placeholder}
-        </option>
-        {options.map((option) => (
-          <option key={option.value} value={option.value}>
-            {option.label}
+      {label && (
+        <label>
+          {label}
+          {required && <span className="required">*</span>}
+        </label>
+      )}
+      <div className="select-wrapper">
+        <select
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+          className="select-box"
+        >
+          <option value="" disabled>
+            {placeholder}
           </option>
-        ))}
-      </select>
+          {options.map((option) => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </select>
+      </div>
     </div>
   );
 };
